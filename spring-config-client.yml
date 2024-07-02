@@ -7,6 +7,13 @@ spring:
     level:
       root: INFO
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        # include: refresh, bus-refresh, beans, env
+
 msg: Hello world - this is from config server.
 ---
 # Development profile
