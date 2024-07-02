@@ -1,0 +1,49 @@
+# Default configuration (no profile specified)
+server:
+  port: 8080
+
+spring:
+  logging:
+    level:
+      root: INFO
+
+msg: Hello world - this is from config server.
+---
+# Development profile
+server:
+  port: 8081
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  logging:
+    level:
+      root: DEBUG
+
+---
+# Test profile
+server:
+  port: 8082
+
+spring:
+  config:
+    activate:
+      on-profile: test
+  logging:
+    level:
+      root: INFO
+
+---
+# Production profile
+server:
+  port: 8083
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  logging:
+    level:
+      root: WARN
+
